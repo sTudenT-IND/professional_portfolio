@@ -81,32 +81,137 @@ body {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
 }
 
+/******************************************************************************************/
+
 
 /* Hero */
+/* Layout */
 .hero {
-    padding: 100px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 50px;
     background: linear-gradient(135deg, #dfe9ff, #ffffff);
+    font-family: 'Poppins', sans-serif;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
+/* Left Section */
+.small-title {
+    font-size: 28px;
+    color: #555;
 }
 
-.hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 25px;
+.big-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 180px;
+    color: #ff42b3;
+    margin: 10px 0 20px;
+    font-weight: 900;
+}
+
+.hero-desc {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #f74ab0;
+    max-width: 650px;
+    margin: 0 auto 30px; /* top/bottom 0 and 30px bottom, horizontally centered */
+    text-align: center;  /* center the text inside */
+}
+
+
+/*one-liner*/
+.one-liner {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.buzzword-container {
+    display: inline-block;
+    overflow: hidden;
+    height: 32px; /* match font-size */
+    vertical-align: bottom;
+}
+
+.buzzword {
+    display: inline-block;
+    animation: slideDown 0.6s ease forwards;
+}
+
+/* Keyframes */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+/* Circular Image */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff84d8;
+    box-shadow: 0 0 20px rgba(255, 0, 200, 0.2);
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 280px;
+        height: 280px;
+    }
 }
 
 .btn {
-    background: #007bff;
-    color: white;
+    background: #faf9fa;
+    color: rgb(228, 52, 213);
+    font-size: 20px;
+    border: 1px solid #ff4ecb;
     padding: 12px 25px;
-    border-radius: 8px;
+    border-radius: 50px;
     text-decoration: none;
+    transition: all 0.3s ease;   /* smooth animation */
 }
+
+/* Hover Effects of btn */
+.btn:hover {
+    background: #e02eea;               /* light pink */
+    color: rgb(245, 238, 243);           /* brighter pink text */
+    border: 1px solid #cb3af3;         /* dark pink border */
+    transform: scale(1.07);            /* text + button zooms in */
+    box-shadow: 0 0 12px rgb(198, 12, 167);        /* white glowing effect */
+}
+
 
 /* Sections */
 .section {
