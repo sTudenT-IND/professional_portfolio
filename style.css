@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f7;
+    color: #333;
+}
+
+/* ---------- NAVBAR STYLING ---------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* Fairy-tale gradient background */
+    background: linear-gradient(90deg,
+        rgba(255, 0, 140, 0.35),
+        rgba(216, 120, 255, 0.35),
+        rgba(140, 0, 255, 0.35)
+    );
+
+    /* Glassmorphism blur */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Soft shadow for floating effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+/* Center the navbar items */
+.nav-center {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Navigation links styling */
+.nav-center a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    transition: all 0.1s ease;
+}
+
+/* Hover effect — glowing magical vibe */
+.nav-center a:hover {
+    color:#ff4ecb;
+    background: #ffffff;                  /* white background */
+    border: 2px solid #ff4ecb;            /* pink border */
+    
+    box-shadow: 
+        0 0 10px rgba(255, 255, 255, 1),   /* strong white glow */
+        0 0 20px rgba(255, 255, 255, 0.9),
+        0 0 30px rgba(255, 105, 180, 0.4); /* soft pink-ish magical vibe */
+
+    transform: translateY(-2px);
+}
+
+
+/* When navbar scrolls */
+.navbar.scrolled {
+    background: linear-gradient(90deg,
+        rgba(255, 0, 140, 0.55),
+        rgba(216, 120, 255, 0.55),
+        rgba(140, 0, 255, 0.55)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Hero */
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #dfe9ff, #ffffff);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section-text {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #eee;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer a {
+    color: #4da3ff;
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.7;
+}
