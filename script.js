@@ -7,7 +7,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-
 //=================== one-liner ==============================
 const buzzwords = [
     "Full Stack Developer",
